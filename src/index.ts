@@ -40,12 +40,12 @@ const plugin: JupyterFrontEndPlugin<void> = {
     widget.title.label = 'Discord';
     widget.title.closable = true;
 
-    let html = document.createElement('div');
+    const html = document.createElement('div');
 
-    let discord_url =
+    const discord_url =
       '<iframe src="https://e.widgetbot.io/channels/' +
-      `${discord_server}/${discord_channel}\"` +
-      'height="600" width="800"></iframe>';
+      `${discord_server}/${discord_channel}` +
+      '"height="600" width="800"></iframe>';
 
     // Note some tags are stripped out, e.g. <script>
     // So it is not possible to embed gitter in (https://sidecar.gitter.im/)
@@ -59,7 +59,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     content.node.appendChild(html);
 
     // Add an application command
-    const command: string = 'discord:open';
+    const command = 'discord:open';
     app.commands.addCommand(command, {
       label: 'Open Discord',
       execute: () => {
