@@ -1,0 +1,38 @@
+{
+    "jupyter.lab.shortcuts": [],
+    "title": "jupyterlab_discord",
+    "description": "jupyterlab_discord settings.",
+    "type": "object",
+    "jupyter.lab.menus": {
+	"main": [
+	    {
+		"id": "jp-mainmenu-chat",
+		"label": "Discord",
+		"rank": 80,
+		"items": [
+		    {
+			"command": "discord:open"
+		    }
+		]
+	    }
+	]
+    },
+
+    "properties": {
+	"discord_server": {
+	    "type": "string",
+	    "title": "Discord server",
+	    "description": "The number for the Discord server, as a string.",
+	    "default": "772879461896552478"
+	},
+	
+	"discord_channel": {
+	    "type": "string",
+	    "title": "Discord channel",
+	    "description": "The number for the Discord channel, as a string.",
+	    "default": "772879462328434739"
+	}
+
+    },
+    "additionalProperties": false
+}
