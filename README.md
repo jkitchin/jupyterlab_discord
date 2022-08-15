@@ -2,7 +2,7 @@
 
 [![Github Actions Status](https://github.com/jkitchin/jupyterlab_discord/workflows/Build/badge.svg)](https://github.com/jkitchin/jupyterlab_discord/actions/workflows/build.yml)
 
-This extension provides a command to open a Discord server/channel in JupyterLab. 
+This extension provides a command to open a Discord server/channel in JupyterLab.
 
 The command is "Open Discord", and there is also a Discord menu item.
 
