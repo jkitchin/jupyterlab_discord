@@ -5,4 +5,3 @@ import { expect, test } from '@jupyterlab/galata';
  * This is required to ensure we capture all log messages.
  */
 test.use({ autoGoto: false });
-
