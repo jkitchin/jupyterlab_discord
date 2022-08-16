@@ -16,7 +16,6 @@ In theory these are configurable; there are jupyterlab_discord settings for the 
 
 ![image](./settings.png)
 
-
 ## Requirements
 
 - JupyterLab >= 3.0

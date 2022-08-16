@@ -1,15 +1,12 @@
 {
-    "jupyter.lab.shortcuts": [
-	{
-            "args": {},
-            "command": "discord:open",
-            "keys": [
-                "Ctrl O",
-                "D"
-            ],
-            "selector": "body"
-	}
-    ],
+  "jupyter.lab.shortcuts": [
+    {
+      "args": {},
+      "command": "discord:open",
+      "keys": ["Ctrl O", "D"],
+      "selector": "body"
+    }
+  ],
   "title": "jupyterlab_discord",
   "description": "jupyterlab_discord settings.",
   "type": "object",
