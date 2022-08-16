@@ -10,6 +10,8 @@ The command is "Open Discord", and there is also a Discord menu item.
 
 ![image](./command.png)
 
+Finally, there is a shortcut: `C-o d`
+
 In theory these are configurable; there are jupyterlab_discord settings for the server, and channel. You may have to refresh the browser if you change these in the settings tab.
 
 ![image](./settings.png)
