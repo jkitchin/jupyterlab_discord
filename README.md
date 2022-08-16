@@ -16,9 +16,16 @@ In theory these are configurable; there are jupyterlab_discord settings for the 
 
 To install the extension, execute:
 
+
 ```bash
-pip install jupyterlab_discord
+pip install https://github.com/jkitchin/jupyterlab_discord/archive/refs/heads/main.zip 
 ```
+
+Maybe one day I will put this on pypi, but today the command above seems sufficient.
+
+<!-- ```bash -->
+<!-- pip install jupyterlab_discord -->
+<!-- ``` -->
 
 ## Uninstall
 
