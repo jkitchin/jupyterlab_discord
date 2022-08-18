@@ -38,7 +38,21 @@
       "title": "Discord channel",
       "description": "The number for the Discord channel, as a string.",
       "default": "772879462328434739"
+    },
+    "discord_height": {
+      "type": "string",
+      "title": "Discord widget height",
+      "description": "The height in pixels as a string.",
+      "default": "600"
+    },
+
+    "discord_width": {
+      "type": "string",
+      "title": "Discord widget width",
+      "description": "The width in pixels as a string.",
+      "default": "800"
     }
   },
+
   "additionalProperties": false
 }

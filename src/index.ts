@@ -23,11 +23,15 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     let discord_server = '0';
     let discord_channel = '0';
+    let discord_height = '0';
+    let discord_width = '0';
 
     if (settingRegistry) {
       const setting = await settingRegistry.load(plugin.id);
       discord_server = setting.get('discord_server').composite as string;
       discord_channel = setting.get('discord_channel').composite as string;
+      discord_width = setting.get('discord_width').composite as string;
+      discord_height = setting.get('discord_height').composite as string;
 
       console.log('jupyterlab_discord settings loaded:', setting.composite);
     }
@@ -45,10 +49,11 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const discord_url =
       '<iframe src="https://e.widgetbot.io/channels/' +
       `${discord_server}/${discord_channel}` +
-      '"height="600" width="800"></iframe>';
+      `"height="${discord_height}" width="${discord_width}"></iframe>`;
 
     // Note some tags are stripped out, e.g. <script>
     // So it is not possible to embed gitter in (https://sidecar.gitter.im/)
+    // or to use some of the other preferred methods for Discord.
 
     // https://docs.widgetbot.io/tutorial/iframes/#getting-started
     html.innerHTML = discord_url;
