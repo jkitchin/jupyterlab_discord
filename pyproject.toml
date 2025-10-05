@@ -1,17 +1,63 @@
 [build-system]
-requires = ["jupyter_packaging~=0.10,<2", "jupyterlab~=3.1"]
-build-backend = "jupyter_packaging.build_api"
+requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-jupyter-builder>=0.5"]
+build-backend = "hatchling.build"
 
-[tool.jupyter-packaging.options]
+[project]
+name = "jupyterlab_discord"
+dynamic = ["version"]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+authors = [
+    { name = "John Kitchin", email = "jkitchin@andrew.cmu.edu" },
+]
+description = "An extension to open a Discord server"
+keywords = ["Jupyter", "JupyterLab", "JupyterLab4"]
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/github_username/jupyterlab_discord"
+
+[tool.hatch.version]
+path = "jupyterlab_discord/_version.py"
+
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyterlab_discord/labextension" = "share/jupyter/labextensions/jupyterlab_discord"
+"install.json" = "share/jupyter/labextensions/jupyterlab_discord/install.json"
+
+[tool.hatch.build.hooks.jupyter-builder]
+dependencies = ["hatch-jupyter-builder>=0.5"]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = [
+    "jupyterlab_discord/labextension/static/style.js",
+    "jupyterlab_discord/labextension/package.json",
+]
 skip-if-exists = ["jupyterlab_discord/labextension/static/style.js"]
-ensured-targets = ["jupyterlab_discord/labextension/static/style.js", "jupyterlab_discord/labextension/package.json"]
 
-[tool.jupyter-packaging.builder]
-factory = "jupyter_packaging.npm_builder"
-
-[tool.jupyter-packaging.build-args]
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
 npm = ["jlpm"]
+
+[tool.hatch.build.hooks.jupyter-builder.editable-build-kwargs]
+build_dir = "jupyterlab_discord/labextension"
+source_dir = "src"
+build_cmd = "install:extension"
+npm = ["jlpm"]
+editable_build_cmd = "build:labextension:dev"
 
 [tool.check-manifest]
 ignore = ["jupyterlab_discord/labextension/**", "yarn.lock", ".*", "package-lock.json"]
