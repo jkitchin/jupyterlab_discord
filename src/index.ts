@@ -49,7 +49,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const discord_url =
       '<iframe src="https://e.widgetbot.io/channels/' +
       `${discord_server}/${discord_channel}` +
-      `"height="${discord_height}" width="${discord_width}"></iframe>`;
+      `" height="${discord_height}" width="${discord_width}"></iframe>`;
 
     // Note some tags are stripped out, e.g. <script>
     // So it is not possible to embed gitter in (https://sidecar.gitter.im/)

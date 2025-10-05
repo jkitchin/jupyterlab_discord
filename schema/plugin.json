@@ -30,14 +30,14 @@
       "type": "string",
       "title": "Discord server",
       "description": "The number for the Discord server, as a string.",
-      "default": "772879461896552478"
+      "default": "1408876219008553041"
     },
 
     "discord_channel": {
       "type": "string",
       "title": "Discord channel",
       "description": "The number for the Discord channel, as a string.",
-      "default": "772879462328434739"
+      "default": "1408876219008553044"
     },
     "discord_height": {
       "type": "string",

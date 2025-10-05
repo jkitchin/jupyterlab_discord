@@ -16,7 +16,7 @@ In theory these are configurable; there are jupyterlab_discord settings for the 
 
 ![image](./settings.png)
 
-This relies on having [WidgetBot](https://widgetbot.io/) setup on your server. You use the /html-embed command in Discord to find the server and channel numbers.
+This relies on having [WidgetBot](https://widgetbot.io/) setup on your server. You need to add the WidgetBot to your Discord server first - see [Adding the Bot](https://docs.widgetbot.io/tutorial/#adding-the-bot) for instructions. You use the /html-embed command in Discord to find the server and channel numbers.
 
 ## Requirements
 
