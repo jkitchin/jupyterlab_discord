@@ -29,6 +29,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.entry-points."ipython.extensions"]
+jupyterlab_discord = "jupyterlab_discord"
+
 [project.urls]
 Homepage = "https://github.com/jkitchin/jupyterlab_discord"
 
